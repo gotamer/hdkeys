@@ -53,6 +53,22 @@ build() {
 	wait
 }
 
+release() {
+	echo "[INF] release ${APPNAME}"
+	fmt
+	echo "[INF] Building"
+	go build -o="${APPNAME}-${GOOS}-${GOARCH}" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/bin/"
+	wait
+	env GOOS=linux GOARCH=arm64	go build -o="${APPNAME}-linux-arm64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/bin/"
+	wait
+	env GOOS=windows GOARCH=amd64 go build -o="${APPNAME}-windows-amd64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/bin/"
+	wait
+	env GOOS=darwin GOARCH=amd64	go build -o="${APPNAME}-darwin-amd64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/bin/"
+	wait
+}
+
+
+
 # executes the function $1 $2 $3 $4 $5 are the arguments
 $@
 

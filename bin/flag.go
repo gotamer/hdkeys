@@ -110,13 +110,11 @@ hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic
     NIP06 - Basic key derivation from mnemonic seed phrase
 	...
 
-COMMANDS:
-
+COMMANDS
 	wif [prompt] or [Environment variable]
 		Decode the private key from wif(Wallet Import Format), then generate the address.
 
-OPTIONS:
-
+OPTIONS
 	-h or --help [bool]
 		Report usage information and exit.
 

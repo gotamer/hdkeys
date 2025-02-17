@@ -24,7 +24,10 @@ Can I trust this code?
 > We recommend every user of this library audit and verify any underlying code for its validity and suitability.
 
 
-```txt
+Cli Help
+--------
+
+```bash
 hdkeys - Mnemonic seeds and Hierarchical Deterministic (HD) addresses.
 
 SYNOPSIS
@@ -52,12 +55,10 @@ hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic
 	...
 
 COMMANDS:
-
 	wif [prompt] or [Environment variable]
 		Decode the private key from wif(Wallet Import Format), then generate the address.
 
 OPTIONS:
-
 	-h or --help [bool]
 		Report usage information and exit.
 
@@ -175,7 +176,7 @@ License
 
 This repo is released under the [WTFPL](http://www.wtfpl.net/) – Do What the Fuck You Want to Public License.
 
-Base code stolen fron
+Base code stolen from
 ---------------------
 
 https://github.com/modood/hdkeygen
