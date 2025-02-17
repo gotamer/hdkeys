@@ -33,9 +33,9 @@ Coders quick start
 ```bash
 git clone https://github.com/gotamer/hdkeys
 cd hdkeys
-make fmt
-make build
-make release
+./make.sh fmt
+./make.sh build
+./make.sh release
 ```
 
 Cli Help
