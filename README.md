@@ -23,6 +23,20 @@ Can I trust this code?
 
 > We recommend every user of this library audit and verify any underlying code for its validity and suitability.
 
+Install
+-------
+See release page for executables.
+
+Coders quick start
+------------------
+
+```bash
+git clone https://github.com/gotamer/hdkeys
+cd hdkeys
+make fmt
+make build
+make release
+```
 
 Cli Help
 --------
