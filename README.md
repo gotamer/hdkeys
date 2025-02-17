@@ -149,6 +149,7 @@ m/86'/0'/0'/0/2    bc1p0pgatlg43wmepyr3e4kxhvhmfqruqcczatfhwhzydmgay6g8t5wsz3hvj
 
 
 Path(BIP44)        Nostr
+-----------------------------------------------------------------------------------------
 m/44'/1237'/0'/0/0 wif:   L4YJqAH2nCjNG2xMgaw7uHLj1Dy11zbXH7B7Sh3nbSbmEah7cPtB
 m/44'/1237'/0'/0/0 Nostr: nsec1mfkaq5sx58ht30js9n2lux0gwn9xeqk3rnca00nf42ujs6ljv0hqh3pr8h
 

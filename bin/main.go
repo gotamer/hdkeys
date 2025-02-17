@@ -99,8 +99,8 @@ func main() {
 		fmt.Printf("%-18s %s %s\n", key.Path, taproot, wif)
 	}
 
-	fmt.Println()
 	fmt.Printf("\n%-18s %-42s\n", "Path(BIP44)", "Nostr")
+	fmt.Println(strings.Repeat("-", 80))
 	for i := 0; i < flag_number; i++ {
 		key, err := km.GetKey(hdkeys.PurposeBIP44, hdkeys.CoinTypeNostr, uint32(i), 0, 0)
 		if err != nil {
