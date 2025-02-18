@@ -244,6 +244,16 @@ func (km *KeyManager) GetKey(purpose, coinType, account, change, index uint32) (
 	return &Key{Path: path, Bip32Key: key}, nil
 }
 
+// GetWifFromPrivateKe - Get Wif From Private Key
+func GetWifFromPrivateKey(prvKey *btcec.PrivateKey, compress bool) (string, error) {
+	// generate the wif(wallet import format) string
+	btcwif, err := btcutil.NewWIF(prvKey, &chaincfg.MainNetParams, compress)
+	if err != nil {
+		return "", err
+	}
+	return btcwif.String(), nil
+}
+
 func CalculateFromPrivateKey(prvKey *btcec.PrivateKey, compress bool) (wif, address, segwitBech32, segwitNested, taproot string, err error) {
 	// generate the wif(wallet import format) string
 	btcwif, err := btcutil.NewWIF(prvKey, &chaincfg.MainNetParams, compress)

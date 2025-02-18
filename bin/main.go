@@ -112,7 +112,7 @@ func main() {
 		}
 
 		if nsec, err := hdkeys.NostrGetPrivateKey(key.Bip32Key.Key); err == nil {
-			fmt.Printf("%-18s wif:   %s\n", key.Path, wif)
+			fmt.Printf("%-18s WIF:   %s\n", key.Path, wif)
 			fmt.Printf("%-18s Nostr: %s\n", key.Path, nsec)
 			if npub, err := hdkeys.NostrGetPublicKey(key.Bip32Key.Key); err != nil {
 				Error.Println(err)
@@ -203,6 +203,7 @@ func readMnemonic() (words string) {
 	Debug.Println(words)
 
 	if len(words) < 10 {
+		words = ""
 		return
 	}
 

@@ -5,6 +5,11 @@ hdkeys <img src="https://www.buybitcoinworldwide.com/img/segwit.png" width="100"
 
 A very simple and easy to use bitcoin(btc) and nostr key/wallet generator.
 
+- hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
+- hdkeys supports BIP39 passphrase protection.
+- creates Bitcoin and Nostr accounts from the same mnemonic seeds
+- hdkeys can create WIF (Wallet Import Format), and decode private keys from WIF
+
 *   BIP32 - Hierarchical Deterministic Wallets
 *   BIP39 - Mnemonic code for generating deterministic keys
 *   BIP43 - Purpose Field for Deterministic Wallets
@@ -14,18 +19,17 @@ A very simple and easy to use bitcoin(btc) and nostr key/wallet generator.
 *   BIP86 - Derivation scheme for Pay-to-Taproot (P2TR) based accounts
 *   BIP173 - Base32 address format for native v0-16 witness outputs
 *   SLIP44 - Registered coin types for BIP-0044
-*   NIP06 - Basic key derivation from mnemonic seed phrase
+*   NIP06 - Basic key derivation from mnemonic seed phrase (https://nostr-nips.com/nip-06)
 
 Can I trust this code?
 ----------------------
 
 > Don't Trust. Verify.
-
 > We recommend every user of this library audit and verify any underlying code for its validity and suitability.
 
 Install
 -------
-See release page for executables.
+See release page for executables. Link at the right ->
 
 Coders quick start
 ------------------
@@ -65,7 +69,7 @@ hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic
     BIP86 - Derivation scheme for Pay-to-Taproot (P2TR) based accounts
     BIP173 - Base32 address format for native v0-16 witness outputs
     SLIP44 - Registered coin types for BIP-0044
-    NIP06 - Basic key derivation from mnemonic seed phrase
+    NIP06 - Basic key derivation from mnemonic seed phrase (https://nostr-nips.com/nip-06)
     NIP19 - bech32-encoded entities
 	...
 
