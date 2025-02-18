@@ -66,6 +66,7 @@ hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic
     BIP173 - Base32 address format for native v0-16 witness outputs
     SLIP44 - Registered coin types for BIP-0044
     NIP06 - Basic key derivation from mnemonic seed phrase
+    NIP19 - bech32-encoded entities
 	...
 
 COMMANDS:
@@ -146,7 +147,6 @@ Path(BIP86)        Taproot(P2TR, bech32m)                                       
 m/86'/0'/0'/0/0    bc1ptckpf58pvsa07fqaj3gfawjtceahh6gk7d7c374adhlsc8sy7gas5yla7m L2PpsRHqQQdD7BW1L7DZVyiJDsjSdXDNAB4fQBHzyNorYaqQkpfw
 m/86'/0'/0'/0/1    bc1p8d0adwzaycl4f2vcuf2uxgvf3qmvqk7lt2wkwvgk0t7af92fpsxsfhmj46 L5RsQhb929ZMoM2Jk7ZhEybAu5BkdbYpds7oeCtd2kRtXH2RufXg
 m/86'/0'/0'/0/2    bc1p0pgatlg43wmepyr3e4kxhvhmfqruqcczatfhwhzydmgay6g8t5wsz3hvjw KwbLrW2qJUXRgn3e5PtpEMrdyegBMH62N1n2BD3Tp9m2DveKrHEP
-
 
 Path(BIP44)        Nostr
 -----------------------------------------------------------------------------------------

@@ -111,9 +111,14 @@ func main() {
 			Error.Fatal(err)
 		}
 
-		if nsec, err := hdkeys.NostrAddress(key.Bip32Key.Key); err == nil {
+		if nsec, err := hdkeys.NostrGetPrivateKey(key.Bip32Key.Key); err == nil {
 			fmt.Printf("%-18s wif:   %s\n", key.Path, wif)
-			fmt.Printf("%-18s Nostr: %s\n\n", key.Path, nsec)
+			fmt.Printf("%-18s Nostr: %s\n", key.Path, nsec)
+			if npub, err := hdkeys.NostrGetPublicKey(key.Bip32Key.Key); err != nil {
+				Error.Println(err)
+			} else {
+				fmt.Printf("%-18s Nostr: %s\n\n", key.Path, npub)
+			}
 		} else {
 			Info.Println(err)
 		}
