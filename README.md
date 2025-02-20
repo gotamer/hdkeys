@@ -201,6 +201,8 @@ $ hdkeys -wif KyHXurGfBovpZpgQjG37ujZaNQobN8rUcamafamJWXwXHkumzVEV
 
 ```
 
+Example json key set
+
 ```bash
 $ hdkeys keyset -mnemonic "leader monkey parrot ring guide accident before fence cannon height naive bean"
 {"Nostr":{"Path":"m/44'/1237'/0'/0/0","Wif":"L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD","NSec":"nsec10allq0gjx7fddtzef0ax00mdps9t2kmtrldkyjfs8l5xruwvh2dq0lhhkp","NPub":"npub1zutzeysacnf9rru6zqwmxd54mud0k44tst6l70ja5mhv8jjumytsd2x7nu"},"Bitcoin":{"Wif":"L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD","Lagacy":"1FyKyNJKMVDLkhH29KmDPUNubcnSrQcoWR","Nested":"3Me6rM5XAfKNGDhVpcozk7NcRj7CDnGYow","SegWit":"bc1q5suwgj96zvqgjq2d8df6wrkxuffz93fxsx3n3l","Taproot":"bc1pmupac93le8w8ncqmsupfmcvc9667t836p9q78zc26pqff5zf5xxswh9re2"}}
