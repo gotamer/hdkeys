@@ -18,12 +18,67 @@ const FILE_NAME_MNEMONIC = "mnemonic-words"
 const compress = true // generate a compressed public key
 
 var (
-	flag_number int = 1
-	flag_debug      = false
+	flag_number int
+	flag_count  int = 1
+	flag_debug  bool
+	command     string
+	argsLength  int
 )
+
+func init() {
+	argsLength = len(os.Args)
+}
+
+func hasNext(no int) bool {
+	if argsLength > no {
+		return true
+	}
+	return false
+}
+
+func getNext(no int) string {
+	return os.Args[no+1]
+}
+
+func getNextArgAsInt(no, varsayılan int) int {
+	if hasNext(no) {
+		if i, err := strconv.Atoi(getNext(no)); err == nil {
+			return i
+		} else {
+			Warn.Println(err)
+		}
+	} else {
+		Warn.Println("Value expected, was not found")
+	}
+	return varsayılan
+}
 
 func flag() {
 
+	if argsLength > 1 {
+
+		// check for commands
+		switch os.Args[1] {
+
+		case "wof":
+			command = "wof"
+			break
+
+		case "keyset":
+			command = "keyset"
+			break
+
+		case "wif":
+			if hasNext(1) {
+				fromWifInput(getNext(1))
+			} else {
+				fromWifInput("")
+			}
+			os.Exit(0)
+		}
+	}
+
+	// check for options
 	for no, arg := range os.Args {
 		switch arg {
 
@@ -39,46 +94,41 @@ func flag() {
 			fmt.Printf("%s\n", build.Info())
 			os.Exit(0)
 
-		case "-mnemonic":
-			var mnemonic = os.Args[no+1]
-			os.Setenv(ENV_MNEMONIC, mnemonic)
-			Info.Printf("Setting env veriable %s\n", ENV_MNEMONIC)
-			continue
-
-		case "-pass":
-			var pass = os.Args[no+1]
-			os.Setenv(ENV_PASSWORD, pass)
-			Info.Printf("Setting env veriable %s\n", ENV_PASSWORD)
-			continue
-
-		case "-debug":
+		case "-d", "--debug":
 			debug(true)
 			continue
 
-		case "-verbose":
+		case "--verbose":
+			debug(true)
 			verbose(true)
 			continue
 
-		case "-n":
-			if num, err := strconv.Atoi(os.Args[no+1]); err == nil {
-				flag_number = num
-				Debug.Println("flag_number: ", flag_number)
-			} else {
-				Error.Println("Flag -n needs a number. 1 is the default.")
-				Error.Fatal(err)
+		case "-no":
+			Debug.Println("In case -n")
+			flag_number = getNextArgAsInt(no, 0)
+			Debug.Println("113 flag_number: ", flag_number)
+			continue
+
+		case "-mnemonic":
+			if hasNext(no) {
+				os.Setenv(ENV_MNEMONIC, getNext(no))
+				Info.Printf("Setting env veriable %s\n", ENV_MNEMONIC)
 			}
 			continue
 
-		case "wif":
-			fromWifInput()
-			os.Exit(0)
+		case "-pass", "-password", "-passphrase":
+			if hasNext(no) {
+				os.Setenv(ENV_PASSWORD, getNext(no))
+				Info.Printf("Setting env veriable %s\n", ENV_PASSWORD)
+			} else {
+				Error.Println("No passphrase provided on command line")
+			}
+			continue
 
-		case "-wif", "--wif":
-			var a = os.Args[no+1]
-			os.Setenv(ENV_WIF, a)
-			Info.Printf("Setting env veriable %s\n", ENV_WIF)
-			fromWifInput()
-			os.Exit(0)
+		case "-count":
+			Debug.Println("In case -count")
+			flag_count = getNextArgAsInt(no, 1)
+			continue
 		}
 	}
 }
@@ -98,6 +148,10 @@ ENVIRONMENT VARIABLE OPTIONS
 DESCRIPTION
 hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
 
+- hdkeys supports BIP39 passphrase protection.
+- hdkeys creates Bitcoin and Nostr accounts from the same mnemonic seeds
+- hdkeys can create WIF (Wallet Import Format), and decode private keys from WIF
+
     BIP32 - Hierarchical Deterministic Wallets
     BIP39 - Mnemonic code for generating deterministic keys
     BIP43 - Purpose Field for Deterministic Wallets
@@ -111,23 +165,32 @@ hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic
 	...
 
 COMMANDS
-	wif [prompt] or [Environment variable]
+	wof
+		Wall Of Fame, prints a whole set of keys
+		COMMAND OPTIONS
+			-count [int] (default = 1)
+				Set number of keys to generate.
+
+	wif [string] or [Environment variable]
 		Decode the private key from wif(Wallet Import Format), then generate the address.
+
+	keyset
+		Gets a Bitcoin and Nostr key set with the same WIF (Wallet Import Format) as JSON.
+		COMMAND OPTIONS
+			-no [int] (default = 0)
+				Nostr Account number to generate
 
 OPTIONS
-	-h or --help [bool]
-		Report usage information and exit.
-
-	-wif [string]
-		Decode the private key from wif(Wallet Import Format), then generate the address.
+	-mnemonic [string]
+		Mnemonic words
 
 	-pass [string]
 		Protect bip39 mnemonic with a passphrase via flag,
 		or use environment variable,
 		or you will be asked to enter at a prompt.
 
-	-n [int] (default = 1)
-		Set number of keys to generate.
+	-h or --help [bool]
+		Report usage information and exit.
 
 	-v [bool]
 		Print version tag and exit.

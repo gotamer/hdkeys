@@ -41,8 +41,6 @@ const (
 // https://github.com/satoshilabs/slips/blob/master/slip-0044.md
 type CoinType = uint32
 
-const CoinTypeBTC CoinType = 0x80000000
-
 const Apostrophe uint32 = 0x80000000 // 0'
 
 type Key struct {
@@ -223,7 +221,6 @@ func (km *KeyManager) GetChangeKey(purpose, coinType, account, change uint32) (*
 
 func (km *KeyManager) GetKey(purpose, coinType, account, change, index uint32) (*Key, error) {
 	path := fmt.Sprintf(`m/%d'/%d'/%d'/%d/%d`, purpose-Apostrophe, coinType-Apostrophe, account, change, index)
-
 	key, ok := km.getKey(path)
 	if ok {
 		return &Key{Path: path, Bip32Key: key}, nil

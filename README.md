@@ -60,6 +60,10 @@ ENVIRONMENT VARIABLE OPTIONS
 DESCRIPTION
 hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
 
+- hdkeys supports BIP39 passphrase protection.
+- hdkeys creates Bitcoin and Nostr accounts from the same mnemonic seeds
+- hdkeys can create WIF (Wallet Import Format), and decode private keys from WIF
+
     BIP32 - Hierarchical Deterministic Wallets
     BIP39 - Mnemonic code for generating deterministic keys
     BIP43 - Purpose Field for Deterministic Wallets
@@ -69,28 +73,36 @@ hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic
     BIP86 - Derivation scheme for Pay-to-Taproot (P2TR) based accounts
     BIP173 - Base32 address format for native v0-16 witness outputs
     SLIP44 - Registered coin types for BIP-0044
-    NIP06 - Basic key derivation from mnemonic seed phrase (https://nostr-nips.com/nip-06)
-    NIP19 - bech32-encoded entities
+    NIP06 - Basic key derivation from mnemonic seed phrase
 	...
 
-COMMANDS:
-	wif [prompt] or [Environment variable]
+COMMANDS
+	wof
+		Wall Of Fame, prints a whole set of keys
+		COMMAND OPTIONS
+			-count [int] (default = 1)
+				Set number of keys to generate.
+
+	wif [string] or [Environment variable]
 		Decode the private key from wif(Wallet Import Format), then generate the address.
 
-OPTIONS:
-	-h or --help [bool]
-		Report usage information and exit.
+	keyset
+		Gets a Bitcoin and Nostr key set with the same WIF (Wallet Import Format) as JSON.
+		COMMAND OPTIONS
+			-no [int] (default = 0)
+				Nostr Account number to generate
 
-	-wif [string]
-		Decode the private key from wif(Wallet Import Format), then generate the address.
+OPTIONS
+	-mnemonic [string]
+		Mnemonic words
 
 	-pass [string]
 		Protect bip39 mnemonic with a passphrase via flag,
 		or use environment variable,
 		or you will be asked to enter at a prompt.
 
-	-n [int] (default = 1)
-		Set number of keys to generate.
+	-h or --help [bool]
+		Report usage information and exit.
 
 	-v [bool]
 		Print version tag and exit.
@@ -189,6 +201,49 @@ $ hdkeys -wif KyHXurGfBovpZpgQjG37ujZaNQobN8rUcamafamJWXwXHkumzVEV
 
 ```
 
+```bash
+$ hdkeys keyset -mnemonic "leader monkey parrot ring guide accident before fence cannon height naive bean"
+{"Nostr":{"Path":"m/44'/1237'/0'/0/0","Wif":"L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD","NSec":"nsec10allq0gjx7fddtzef0ax00mdps9t2kmtrldkyjfs8l5xruwvh2dq0lhhkp","NPub":"npub1zutzeysacnf9rru6zqwmxd54mud0k44tst6l70ja5mhv8jjumytsd2x7nu"},"Bitcoin":{"Wif":"L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD","Lagacy":"1FyKyNJKMVDLkhH29KmDPUNubcnSrQcoWR","Nested":"3Me6rM5XAfKNGDhVpcozk7NcRj7CDnGYow","SegWit":"bc1q5suwgj96zvqgjq2d8df6wrkxuffz93fxsx3n3l","Taproot":"bc1pmupac93le8w8ncqmsupfmcvc9667t836p9q78zc26pqff5zf5xxswh9re2"}}
+```
+```json
+{
+  "Nostr": {
+    "Path": "m/44'/1237'/0'/0/0",
+    "Wif": "L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD",
+    "NSec": "nsec10allq0gjx7fddtzef0ax00mdps9t2kmtrldkyjfs8l5xruwvh2dq0lhhkp",
+    "NPub": "npub1zutzeysacnf9rru6zqwmxd54mud0k44tst6l70ja5mhv8jjumytsd2x7nu"
+  },
+  "Bitcoin": {
+    "Wif": "L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD",
+    "Lagacy": "1FyKyNJKMVDLkhH29KmDPUNubcnSrQcoWR",
+    "Nested": "3Me6rM5XAfKNGDhVpcozk7NcRj7CDnGYow",
+    "SegWit": "bc1q5suwgj96zvqgjq2d8df6wrkxuffz93fxsx3n3l",
+    "Taproot": "bc1pmupac93le8w8ncqmsupfmcvc9667t836p9q78zc26pqff5zf5xxswh9re2"
+  }
+}
+```
+
+Example address path #7 with Passphrase
+```bash
+$ hdkeys keyset -no 7 -pass 2345 -mnemonic "leader monkey parrot ring guide accident before fence cannon height naive bean"
+```
+```json
+{
+  "Nostr": {
+    "Path": "m/44'/1237'/7'/0/0",
+    "Wif": "L35EeWsQHijBKXJQJMdCnGrE8L2xLsYTicomb8kAgujKrcigZFYw",
+    "NSec": "nsec1464z2lqk9q5a7ct79wunnax3w2urrkpmsz4u9c6zttws4ueg89ssfz8xa6",
+    "NPub": "npub15jqt9xfzf7awawtls6qq9cy5hj4rpgxrs6meqnae7eaw2nvgsqksdr0lcp"
+  },
+  "Bitcoin": {
+    "Wif": "L35EeWsQHijBKXJQJMdCnGrE8L2xLsYTicomb8kAgujKrcigZFYw",
+    "Lagacy": "1LGj6Vyi24uZyLWURK2Gm3eu26vrn1L43D",
+    "Nested": "3GygZBMK6vfQ4R2Vcw9K6dG7GWwfsV4dkq",
+    "SegWit": "bc1q6d3uftavdr6hresf5xl3e7clr6kt2l5ednwlf8",
+    "Taproot": "bc1pulhwyfv8e6akfksqsdugn2wyk8fn4n0hft3rdx0mtke3npmwzrxqgjc2sf"
+  }
+}
+```
 
 License
 -------

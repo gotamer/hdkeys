@@ -54,6 +54,7 @@ build() {
 }
 
 release() {
+	# go tool dist list | grep linux
 	echo "[INF] release ${APPNAME}"
 	fmt
 	echo "[INF] Building"
