@@ -93,7 +93,8 @@ func wof(count int) {
 		}
 		fmt.Printf("%-18s WIF:   %s\n", nostr.Path, nostr.Wif)
 		fmt.Printf("%-18s Nostr: %s\n", nostr.Path, nostr.NSec)
-		fmt.Printf("%-18s Nostr: %s\n\n", nostr.Path, nostr.NPub)
+		fmt.Printf("%-18s Nostr: %s\n", nostr.Path, nostr.NPub)
+		fmt.Printf("%-18s PHEX: %s\n\n", nostr.Path, nostr.PHex)
 	}
 	fmt.Println()
 

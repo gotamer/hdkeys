@@ -18,6 +18,7 @@ type Nostr struct {
 	Wif  string
 	NSec string
 	NPub string
+	PHex string
 }
 
 func (km *KeyManager) GetNostr(no uint32) (nostr *Nostr, err error) {
@@ -41,7 +42,7 @@ func (km *KeyManager) GetNostr(no uint32) (nostr *Nostr, err error) {
 		return
 	}
 
-	npub, err := NostrGetPublicKey(pathKey.Bip32Key.Key)
+	phex, npub, err := NostrGetPublicKey(pathKey.Bip32Key.Key)
 	if err != nil {
 		return
 	}
@@ -51,6 +52,7 @@ func (km *KeyManager) GetNostr(no uint32) (nostr *Nostr, err error) {
 	nostr.Wif = nostrWif.String()
 	nostr.NSec = nsec
 	nostr.NPub = npub
+	nostr.PHex = phex // Public Key in Hex
 	return
 }
 
@@ -64,10 +66,10 @@ func NostrGetPrivateKey(privateKeyBytes []byte) (nsec string, err error) {
 	return nsec, err
 }
 
-func NostrGetPublicKey(privateKeyBytes []byte) (npub string, err error) {
-	var pub string
-	if pub, err = nostrGetPublicKey(privateKeyBytes); err == nil {
-		npub, err = nostrEncodePublicKey(pub) // Encode to HEX
+// phex = Public Key Hex
+func NostrGetPublicKey(privateKeyBytes []byte) (phex, npub string, err error) {
+	if phex, err = nostrGetPublicKey(privateKeyBytes); err == nil {
+		npub, err = nostrEncodePublicKey(phex)
 	}
 	return
 }
