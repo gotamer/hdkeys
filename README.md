@@ -59,6 +59,7 @@ Examples
 
 [wof output text](doc/wof.txt)
 
+Don't Trust Verify NIP06 [test vector](https://nostr-nips.com/nip-06#test-vectors)
 
 ### Wallet Import Format
     $ hdkeys wif L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD > doc/wif.txt
