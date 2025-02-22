@@ -162,29 +162,30 @@ hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic
     BIP173 - Base32 address format for native v0-16 witness outputs
     SLIP44 - Registered coin types for BIP-0044
     NIP06 - Basic key derivation from mnemonic seed phrase
+    NIP05 - Mapping Nostr keys to DNS-based internet identifiers, HEX key output
 	...
 
 COMMANDS
-	wof
-		Wall Of Fame, prints a whole set of keys
-		COMMAND OPTIONS
-			-count [int] (default = 1)
-				Set number of keys to generate.
-
-	wif [string] or [Environment variable]
-		Decode the private key from wif(Wallet Import Format), then generate the address.
-
 	keyset
 		Gets a Bitcoin and Nostr key set with the same WIF (Wallet Import Format) as JSON.
 		COMMAND OPTIONS
 			-no [int] (default = 0)
 				Nostr Account number to generate
 
+	wif [string] or [Environment variable]
+		Decode the private key from wif(Wallet Import Format), then generate the address.
+
+	wof
+		Wall Of Fame, prints a whole set of keys
+		COMMAND OPTIONS
+			-count [int] (default = 1)
+				Set number of keys to generate.
+
 OPTIONS
-	-mnemonic [string]
+	-mnemonic [string] [Environment variable]
 		Mnemonic words
 
-	-pass [string]
+	-pass [string] [Environment variable]
 		Protect bip39 mnemonic with a passphrase via flag,
 		or use environment variable,
 		or you will be asked to enter at a prompt.

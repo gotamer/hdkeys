@@ -19,7 +19,9 @@ A very simple and easy to use bitcoin(btc) and nostr key/wallet generator.
 *   BIP86 - Derivation scheme for Pay-to-Taproot (P2TR) based accounts
 *   BIP173 - Base32 address format for native v0-16 witness outputs
 *   SLIP44 - Registered coin types for BIP-0044
+*   NIP05 - Mapping Nostr keys to DNS-based internet identifiers, HEX key output
 *   NIP06 - Basic key derivation from mnemonic seed phrase (https://nostr-nips.com/nip-06)
+
 
 Can I trust this code?
 ----------------------
@@ -74,6 +76,7 @@ hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic
     BIP173 - Base32 address format for native v0-16 witness outputs
     SLIP44 - Registered coin types for BIP-0044
     NIP06 - Basic key derivation from mnemonic seed phrase
+    NIP05 - Mapping Nostr keys to DNS-based internet identifiers, HEX key output
 	...
 
 COMMANDS
