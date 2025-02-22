@@ -49,5 +49,5 @@ https://github.com/modood/hdkeygen with same license
 
 ### Tags
 
-#bitcoin #BIP32 #BIP39 #BIP43 #BIP44 #BIP84 #BIP86 #BIP173 #SLIP44
+#bitcoin [BIP32] #BIP39 #BIP43 #BIP44 #BIP84 #BIP86 #BIP173 #SLIP44
 #nostr #nips #NIP05 #NIP06 #NIP19
