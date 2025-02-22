@@ -41,6 +41,14 @@ Install
 
 See [release](https://github.com/gotamer/hdkeys/releases) page for executables.
 
+
+Manual / help text
+------------------
+
+    hdkeys --help
+
+[help output](doc/help.txt)
+
 ____________
 Examples
 --------
