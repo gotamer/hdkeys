@@ -57,19 +57,19 @@ Examples
 
     hdkeys wof -pass "" -mnemonic "leader monkey parrot ring guide accident before fence cannon height naive bean" > doc/wof.txt
 
-[output text](doc/wof.txt)
+[wof output text](doc/wof.txt)
 
 
 ### Wallet Import Format
     $ hdkeys wif L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD > doc/wif.txt
 
-[output text](doc/wif.txt)
+[wif output text](doc/wif.txt)
 
 
 ### json key set
     $ hdkeys keyset -pass "" -mnemonic "leader monkey parrot ring guide accident before fence cannon height naive bean" > doc/keyset.json
 
-[output text](doc/keyset.json)
+[keyset output json](doc/keyset.json)
 
 ___________
 
