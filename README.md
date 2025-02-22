@@ -1,3 +1,10 @@
+---
+title: bitcoin and nostr key/wallet generator
+description: hrkeys creates Bitcoin and Nostr accounts from the same mnemonic seeds
+tags: nostr, nips, NIP05, NIP06, NIP19, bitcoin, BIP32, BIP39, BIP43, BIP44, BIP84, BIP86, BIP173, SLIP44
+layout: page
+---
+
 hdkeys <img src="https://www.buybitcoinworldwide.com/img/segwit.png" width="100">
 ========
 
@@ -47,7 +54,4 @@ Base code stolen from
 
 https://github.com/modood/hdkeygen with same license
 
-### Tags
 
-#bitcoin [BIP32] #BIP39 #BIP43 #BIP44 #BIP84 #BIP86 #BIP173 #SLIP44
-#nostr #nips #NIP05 #NIP06 #NIP19
