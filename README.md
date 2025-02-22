@@ -1,6 +1,6 @@
 ---
-title: bitcoin and nostr key/wallet generator
-description: hrkeys creates Bitcoin and Nostr accounts from the same mnemonic seeds
+title: hdkeys
+description: hdkeys creates Bitcoin and Nostr accounts from the same mnemonic seeds
 tags: nostr, nips, NIP05, NIP06, NIP19, bitcoin, BIP32, BIP39, BIP43, BIP44, BIP84, BIP86, BIP173, SLIP44
 layout: page
 ---
@@ -38,11 +38,11 @@ Can I trust this code?
 
 Install
 -------
-See release page for executables. Link at the right ->
+See [release](https://github.com/gotamer/hdkeys/releases) page for executables.
 
 Coders
 ------
-Coders quick start: [link](coders.md]
+Coders quick start: [link](coders.md)
 
 License
 -------
