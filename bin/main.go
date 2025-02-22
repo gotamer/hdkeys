@@ -18,14 +18,14 @@ var (
 func main() {
 	flag()
 
-		var pass = readPassword()
-		var mnemonic = readMnemonic()
+	var pass = readPassword()
+	var mnemonic = readMnemonic()
 
-		var err error
-		km, err = hdkeys.NewKeyManager(mnemonic, pass)
-		if err != nil {
-			Error.Fatal(err)
-		}
+	var err error
+	km, err = hdkeys.NewKeyManager(mnemonic, pass)
+	if err != nil {
+		Error.Fatal(err)
+	}
 
 	switch command {
 
