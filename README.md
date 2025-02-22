@@ -10,7 +10,7 @@ hdkeys <img src="https://www.buybitcoinworldwide.com/img/segwit.png" width="100"
 
 [![license](https://img.shields.io/badge/license-WTFPL%20--%20Do%20What%20the%20Fuck%20You%20Want%20to%20Public%20License-green.svg)](https://github.com/modood/hdkeygen/blob/master/LICENSE)
 
-A very simple and easy to use bitcoin(btc) and nostr key/wallet generator.
+A very simple and easy to use bitcoin and nostr key/wallet generator.
 
 - hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
 - hdkeys supports BIP39 passphrase protection.
@@ -38,11 +38,36 @@ Can I trust this code?
 
 Install
 -------
+
 See [release](https://github.com/gotamer/hdkeys/releases) page for executables.
+
+____________
+Examples
+--------
+
+### Wall Of Fame
+
+    hdkeys wof -pass "" -mnemonic "leader monkey parrot ring guide accident before fence cannon height naive bean" > doc/wof.txt
+
+[output text](doc/wof.txt)
+
+
+### Wallet Import Format
+    $ hdkeys wif L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD > doc/wif.txt
+
+[output text](doc/wif.txt)
+
+
+### json key set
+    $ hdkeys keyset -pass "" -mnemonic "leader monkey parrot ring guide accident before fence cannon height naive bean" > doc/keyset.json
+
+[output text](doc/keyset.json)
+
+___________
 
 Coders
 ------
-Coders quick start: [link](coders.md)
+Coders quick start: [link](doc/coders.md)
 
 License
 -------
@@ -52,6 +77,4 @@ This repo is released under the [WTFPL](http://www.wtfpl.net/) – Do What the F
 Base code stolen from
 ---------------------
 
-https://github.com/modood/hdkeygen with same license
-
-
+[modood](https://github.com/modood/hdkeygen) with same license

@@ -1,0 +1,11 @@
+
+ Wallet Import Format:
+ *   WIF(compressed):         L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD
+ *   WIF(uncompressed):       5JnSPg5PoxJujP9ykJV8rQo91VHHF11pXyZRDfRDDZRkmiGh6Pb
+
+ Public Addresses:
+ *   Legacy(compresed):       1FyKyNJKMVDLkhH29KmDPUNubcnSrQcoWR
+ *   Legacy(uncompressed):    12WyhvCLf4uw64HCXDWnG7DJZhsbvbHjM1
+ *   SegWit(nested):          3Me6rM5XAfKNGDhVpcozk7NcRj7CDnGYow
+ *   SegWit(bech32):          bc1q5suwgj96zvqgjq2d8df6wrkxuffz93fxsx3n3l
+ *   Taproot(bech32m):        bc1pmupac93le8w8ncqmsupfmcvc9667t836p9q78zc26pqff5zf5xxswh9re2

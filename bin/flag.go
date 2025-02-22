@@ -60,14 +60,6 @@ func flag() {
 		// check for commands
 		switch os.Args[1] {
 
-		case "wof":
-			command = "wof"
-			break
-
-		case "keyset":
-			command = "keyset"
-			break
-
 		case "wif":
 			if hasNext(1) {
 				fromWifInput(getNext(1))
@@ -75,6 +67,14 @@ func flag() {
 				fromWifInput("")
 			}
 			os.Exit(0)
+
+		case "wof":
+			command = "wof"
+			break
+
+		case "keyset":
+			command = "keyset"
+			break
 		}
 	}
 

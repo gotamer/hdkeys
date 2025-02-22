@@ -1,0 +1,30 @@
+
+BIP39 Mnemonic:    leader monkey parrot ring guide accident before fence cannon height naive bean
+BIP39 Passphrase:  <none>
+BIP39 Seed:        173b9c5f0d165502d08a4d122b2c9bf1e33e27806eac119713600a263c1241101dc55fb7cffb8f48a59b19a5ba65b037904f907bb8d08eb5bff8a17e85c2ee93
+BIP32 Root Key:    xprv9s21ZrQH143K3e2FkntUKioGqrCiZPy98xTawMoWZersXvujjLQy6xBpS81msv7V1wGkMsQjx6jzmPn3VnjpMHB9FLY2wUxZor5BEbptqve
+
+Path(BIP44)        Legacy(P2PKH, compresed)           WIF(Wallet Import Format)                           
+----------------------------------------------------------------------------------------------------------
+m/44'/0'/0'/0/0    15HpCEM4HibeZdG6itJvR6BiWUGo7aDZrC KzitCNHweRZ6rXMYCgQMwJ4WdKeLYXf36ppsqL7RVFaCXJ6QRd38
+
+Path(BIP49)        SegWit(P2WPKH-nested-in-P2SH)      WIF(Wallet Import Format)
+----------------------------------------------------------------------------------------------------------
+m/49'/0'/0'/0/0    3Hpgtw4FDiv3oFZNQdcvncVmVQodcvuLw3 L3XjW1vKJepFtYqa9h5bDSAL3ahJj3NfTz5BKNxSSLomdMHTPJ6y
+
+Path(BIP84)        SegWit(P2WPKH, bech32)                     WIF(Wallet Import Format)
+------------------------------------------------------------------------------------------------------------------
+m/84'/0'/0'/0/0    bc1q8zxz5kl6q30y2mzhx86gcwcz0t0hgzl2f2jpm5 L3dQ1Wo5pvx1yJh8wYsgFyeKmKe3VX4JP9yGJn9Mbrnf99XSYLQJ
+
+Path(BIP86)        Taproot(P2TR, bech32m)                                         WIF(Wallet Import Format)
+--------------------------------------------------------------------------------------------------------------------------------------
+m/86'/0'/0'/0/0    bc1ppp2h2mqq4r8al4n8y800qfe53hvuamg3eqz4kz299eyqx6u7c9esfpualz L2vLXqEvCB9GYwah5vGP6MZg142kHEiwZY5GQeCa8vBJ8e6p6Gk7
+
+Path(BIP44)        Nostr                                     
+--------------------------------------------------------------------------------
+m/44'/1237'/0'/0/0 WIF:  L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD
+m/44'/1237'/0'/0/0 NSec: nsec10allq0gjx7fddtzef0ax00mdps9t2kmtrldkyjfs8l5xruwvh2dq0lhhkp
+m/44'/1237'/0'/0/0 NPub: npub1zutzeysacnf9rru6zqwmxd54mud0k44tst6l70ja5mhv8jjumytsd2x7nu
+m/44'/1237'/0'/0/0 PHex: 17162c921dc4d2518f9a101db33695df1afb56ab82f5ff3e5da6eec3ca5cd917
+
+
