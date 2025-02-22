@@ -1,6 +1,6 @@
 ---
 title: hdkeys
-description: hdkeys creates Bitcoin and Nostr accounts from the same mnemonic seeds
+description: hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library.
 tags: nostr, nips, NIP05, NIP06, NIP19, bitcoin, BIP32, BIP39, BIP43, BIP44, BIP84, BIP86, BIP173, SLIP44
 layout: page
 ---
@@ -10,12 +10,13 @@ hdkeys <img src="https://www.buybitcoinworldwide.com/img/segwit.png" width="100"
 
 [![license](https://img.shields.io/badge/license-WTFPL%20--%20Do%20What%20the%20Fuck%20You%20Want%20to%20Public%20License-green.svg)](https://github.com/modood/hdkeygen/blob/master/LICENSE)
 
-A very simple and easy to use bitcoin and nostr key/wallet generator.
+hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library.
 
 - hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
-- hdkeys supports BIP39 passphrase protection.
-- creates Bitcoin and Nostr accounts from the same mnemonic seeds
-- hdkeys can create WIF (Wallet Import Format), and decode private keys from WIF
+- hdkeys supports BIP39 passphrase protection for HD Wallets
+- hdkeys creates Bitcoin and Nostr keys/accounts from the same mnemonic seeds
+- hdkeys can create the WIF (Wallet Import Format), and decode private and public keys from WIF
+___________
 
 *   BIP32 - Hierarchical Deterministic Wallets
 *   BIP39 - Mnemonic code for generating deterministic keys
@@ -29,7 +30,7 @@ A very simple and easy to use bitcoin and nostr key/wallet generator.
 *   NIP05 - Mapping Nostr keys to DNS-based internet identifiers, HEX key output
 *   NIP06 - Basic key derivation from mnemonic seed phrase (https://nostr-nips.com/nip-06)
 *   NIP19 - bech32-encoded entities (nsec, npub)
-
+___________
 
 Can I trust this code?
 ----------------------
@@ -86,4 +87,4 @@ This repo is released under the [WTFPL](http://www.wtfpl.net/) – Do What the F
 Base code stolen from
 ---------------------
 
-[modood](https://github.com/modood/hdkeygen) with same license
+[hdkeygen](https://github.com/modood/hdkeygen) with same license __Thank you [modood](https://github.com/modood)__
