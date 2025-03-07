@@ -1,14 +1,6 @@
----
-title: hdkeys
-description: hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library. It allows for the creation of keys, mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
-tags: nostr, nips, NIP05, NIP06, NIP19, bitcoin, BIP32, BIP39, BIP43, BIP44, BIP84, BIP86, BIP173, SLIP44
-layout: page
----
 
-hdkeys <img src="https://www.buybitcoinworldwide.com/img/segwit.png" width="100">
-========
-
-[![license](https://img.shields.io/badge/license-WTFPL%20--%20Do%20What%20the%20Fuck%20You%20Want%20to%20Public%20License-green.svg)](https://github.com/modood/hdkeygen/blob/master/LICENSE)
+hdkeys
+======
 
 hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library. It allows for the creation of keys, mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
 
