@@ -1,0 +1,3 @@
+Title = hdkeys (Hierarchical Deterministic Keys)
+Description = hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library. It allows for the creation of keys, mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
+Tags = [nostr, nips, NIP05, NIP06, NIP19, bitcoin, BIP32, BIP39, BIP43, BIP44, BIP84, BIP86, BIP173, SLIP44]
