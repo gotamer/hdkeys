@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/gotamer/hdkeys"
+	hdkeys "github.com/gotamer/hdkeys/lib"
 )
 
 func GetAllJson(no uint32) (string, error) {

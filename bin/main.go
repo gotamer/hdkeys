@@ -7,7 +7,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/gotamer/hdkeys"
+	hdkeys "github.com/gotamer/hdkeys/lib"
 	"golang.org/x/term"
 )
 

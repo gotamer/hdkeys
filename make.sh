@@ -36,12 +36,9 @@ echo "[INF] setting build env"
 
 fmt() {
 	echo "[INF] FMT"
-	cd "${ROOTDIR}"
-	go fmt .
+	go fmt "${ROOTDIR}/bin"
 	wait
-	cd "${ROOTDIR}/bin"
-	go fmt .
-	cd "${ROOTDIR}"
+	go fmt "${ROOTDIR}/lib"
 	wait
 }
 

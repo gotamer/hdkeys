@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/gotamer/hdkeys"
+	hdkeys "github.com/gotamer/hdkeys/lib"
 )
 
 func fromWifInput(input string) {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gotamer/hdkeys"
+	hdkeys "github.com/gotamer/hdkeys/lib"
 )
 
 func wof(count int) {
