@@ -1,3 +1,9 @@
+---
+title: Hierarchical Deterministic Keys
+description: hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library.
+tags: [hdkeys, subkeys, nostr, nips, NIP05, NIP06, NIP19, bitcoin, BIP32, BIP39, BIP43, BIP44, BIP84, BIP86, BIP173, SLIP44]
+---
+
 Hierarchical Deterministic Keys
 ===============================
 
@@ -50,10 +56,3 @@ Install and documentation
 -------------------------
 
 [Documents](https://github.com/gotamer/hdkeys/tree/master/doc/README.md)
-
-
----
-title: Hierarchical Deterministic Keys
-description: hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library.
-tags: [hdkeys, subkeys, nostr, nips, NIP05, NIP06, NIP19, bitcoin, BIP32, BIP39, BIP43, BIP44, BIP84, BIP86, BIP173, SLIP44]
----
