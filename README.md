@@ -1,19 +1,28 @@
----
-title: Hierarchical Deterministic Keys
-description: hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library. It allows for the creation of keys, mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
-tags: [nostr, nips, NIP05, NIP06, NIP19, bitcoin, BIP32, BIP39, BIP43, BIP44, BIP84, BIP86, BIP173, SLIP44]
----
-
 Hierarchical Deterministic Keys
 ===============================
 
-hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library. It allows for the creation of keys, mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
+hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library.  
 
-- hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
-- hdkeys supports BIP39 passphrase protection for HD Wallets
+- It allows for the creation of __mnemonic seeds__ (or bring your own).  
+- From the __mnemonic seeds__ it will create __Hierarchical Deterministic (HD)__ addresses AKA __HD Wallets__.
+- __HD Wallets__ means you may create nearly unlimited __subkeys__ for Bitcoin and Nostr
+
+________________________
+
+Why
+------- 
+
+It is hard to keep secrets specially multiple secrets, with __hdkeys__ you have to keep only your __mnemonic seeds__ secret. All other Bitcoun and Nostr keys are derived from your __mnemonic seeds__ and can be reproduced at any time.
+
+This alows you to have multiple identieties. You will be able to prove, selectivly, and if needed that those identieties belong to you.
+
+- hdkeys supports BIP39 passphrase protection for __HD Wallets__
 - hdkeys creates Bitcoin and Nostr keys/accounts from the same mnemonic seeds
 - hdkeys can create the WIF (Wallet Import Format), and decode private and public keys from WIF
 ___________
+
+Standards
+---------
 
 *   BIP32 - Hierarchical Deterministic Wallets
 *   BIP39 - Mnemonic code for generating deterministic keys
@@ -34,49 +43,15 @@ Can I trust this code?
 
 > Don't Trust. Verify.
 
-Install
--------
 
-See [release](https://github.com/gotamer/hdkeys/releases) page for executables.
+Install and documentation
+-------------------------
 
-
-Manual / help text
-------------------
-
-    hdkeys --help
-
-[help output](https://github.com/gotamer/hdkeys/tree/master/doc/help.txt)
-
-____________
-Examples
---------
-
-### Wall Of Fame
-
-    hdkeys wof -pass "" -mnemonic "leader monkey parrot ring guide accident before fence cannon height naive bean" > doc/wof.txt
-
-[wof output text](https://github.com/gotamer/hdkeys/tree/master/doc/wof.txt)
-
-Don't Trust Verify NIP06 [test vector](https://nostr-nips.com/nip-06#test-vectors)
-
-### Wallet Import Format
-    $ hdkeys wif L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD > doc/wif.txt
-
-[wif output text](https://github.com/gotamer/hdkeys/tree/master/doc/wif.txt)
+[Documents](https://github.com/gotamer/hdkeys/tree/master/doc/README.md)
 
 
-### json key set
-    $ hdkeys keyset -pass "" -mnemonic "leader monkey parrot ring guide accident before fence cannon height naive bean" > doc/keyset.json
-
-[keyset output json](https://github.com/gotamer/hdkeys/tree/master/doc/keyset.json)
-
-___________
-
-Coders
-------
-Coders quick start: [link](https://github.com/gotamer/hdkeys/tree/master/doc/coders.md)
-
-Base code stolen from:
-----------------------
-
-[hdkeygen](https://github.com/modood/hdkeygen) with same license Thank you [modood](https://github.com/modood)
+---
+title: Hierarchical Deterministic Keys
+description: hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library.
+tags: [hdkeys, subkeys, nostr, nips, NIP05, NIP06, NIP19, bitcoin, BIP32, BIP39, BIP43, BIP44, BIP84, BIP86, BIP173, SLIP44]
+---
