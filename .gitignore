@@ -4,6 +4,7 @@
 mnemonic*
 *mnemonic
 hdkeys*
+bin/*
 
 # Config source #
 ###################
