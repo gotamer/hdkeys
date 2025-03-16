@@ -1,4 +1,4 @@
-module github.com/gotamer/hdkeys
+module go.hansaray.pw/hdkeys
 
 go 1.23.4
 

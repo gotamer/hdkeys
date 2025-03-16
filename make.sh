@@ -37,7 +37,7 @@ metadata() {
     echo "Name = '${APPNAME}'" >> metadata.toml 
     echo "Version = '${VERSION}'" >> metadata.toml 
     echo "Package = '${PACKAGE}'" >> metadata.toml 
-    echo "Repo = 'github.com/gotamer/${APPNAME}.git'" >> metadata.toml 
+    echo "Repo = 'https://github.com/gotamer/${APPNAME}'" >> metadata.toml 
     echo "Branch = 'master'" >> metadata.toml 
     echo "Homepage = 'http://${PACKAGE}'" >> metadata.toml 
     echo 'Title = "Hierarchical Deterministic Keys"' >> metadata.toml 

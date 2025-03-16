@@ -2,7 +2,7 @@
 Name = 'hdkeys'
 Version = '0.0.5'
 Package = 'go.hansaray.pw/hdkeys'
-Repo = 'github.com/gotamer/hdkeys.git'
+Repo = 'https://github.com/gotamer/hdkeys'
 Branch = 'master'
 Homepage = "http://go.hansaray.pw/hdkeys"
 Title = "Hierarchical Deterministic Keys"
