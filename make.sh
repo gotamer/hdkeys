@@ -49,17 +49,47 @@ metadata() {
 
 fmt() {
 	echo "[INF] FMT"
-	go fmt "${ROOTDIR}/cmd"
-	wait
 	go fmt "${ROOTDIR}/lib"
+	wait
+	go fmt "${ROOTDIR}/cmd/${APPNAME}"
+	wait
+	go fmt "${ROOTDIR}/cmd/recover"
+	wait
+	go fmt "${ROOTDIR}/cmd/wordlist"
 	wait
 }
 
 build() {
-	echo "[INF] make & install ${APPNAME}"
 	fmt
+	rm -r "${ROOTDIR}/bin"
 	echo "[INF] Building"
-	go build -o="bin/${APPNAME}" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/"
+
+	echo "[INF] make & install ${APPNAME}"
+	go build -o="${ROOTDIR}/bin/${APPNAME}" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/${APPNAME}"
+	wait
+
+	APPNAME='hdkeys_recover'
+	LDFLAGS=("-s -w "
+		"-X '${PACKAGE}/build.AppName=${APPNAME}'"
+		"-X '${PACKAGE}/build.Version=${VERSION}'"
+		"-X '${PACKAGE}/build.CommitHash=${COMMIT_HASH}'"
+		"-X '${PACKAGE}/build.BuildTime=${BUILD_TIME}'"
+		"-X '${PACKAGE}/build.UserName=${BUILD_USER}'"
+	)
+	echo "[INF] make & install ${APPNAME}"
+	go build -o="${ROOTDIR}/bin/${APPNAME}" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/recover"
+	wait
+
+	APPNAME='hdkeys_wordlist'
+	LDFLAGS=("-s -w "
+		"-X '${PACKAGE}/build.AppName=${APPNAME}'"
+		"-X '${PACKAGE}/build.Version=${VERSION}'"
+		"-X '${PACKAGE}/build.CommitHash=${COMMIT_HASH}'"
+		"-X '${PACKAGE}/build.BuildTime=${BUILD_TIME}'"
+		"-X '${PACKAGE}/build.UserName=${BUILD_USER}'"
+	)
+	echo "[INF] make & install ${APPNAME}"
+	go build -o="${ROOTDIR}/bin/${APPNAME}" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/wordlist"
 	wait
 }
 

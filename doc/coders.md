@@ -10,9 +10,7 @@ Quick start
 ```bash
 git clone https://github.com/gotamer/hdkeys
 cd hdkeys
-./make.sh fmt
 ./make.sh build
-./make.sh release
 ```
 
 Example address path #7, from Mnemonic with Passphrase

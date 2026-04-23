@@ -1,10 +1,11 @@
-
 # App Specific #
 ###################
 mnemonic*
 *mnemonic
 hdkeys*
 bin/*
+testdata/word_list.txt
+testdata/history*.txt
 
 # Config source #
 ###################

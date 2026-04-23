@@ -1,6 +1,6 @@
 module go.hansaray.pw/hdkeys
 
-go 1.23.4
+go 1.25.0
 
 require (
 	github.com/btcsuite/btcd v0.23.5-0.20231215221805-96c9fd8078fd
@@ -20,4 +20,5 @@ require (
 	github.com/decred/dcrd/crypto/blake256 v1.0.0 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1 // indirect
 	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/text v0.36.0 // indirect
 )
