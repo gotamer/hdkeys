@@ -1,4 +1,3 @@
-
 Hierarchical Deterministic Keys
 ===============================
 
@@ -10,7 +9,8 @@ mnemonic seeds, and a command-line tool that uses this library.
 - __HD Wallets__ means you may create nearly unlimited __subkeys__ for Bitcoin and Nostr
 - hdkeys supports __BIP39 passphrase protection__ for __HD Wallets__
 - hdkeys can create the __Wallet Import Format (WIF)__, and decode private and public keys from __WIF__
-
+- `hdkeys recover` can recover BIP39 passwords
+- `hdkeys_wordlist` will create password wordlist for `hdkeys recover`
 
 Why
 ------- 
@@ -44,11 +44,11 @@ Standards
 
 Can I trust this code?
 ----------------------
-
 > Don't Trust. Verify.
 
 
 Install and documentation
 -------------------------
+- [Documents](https://github.com/gotamer/hdkeys/tree/master/doc/README.md)
+- [Blog Posts](https://tamer.pw/en/tags/hdkeys.html)
 
-[Documents](https://github.com/gotamer/hdkeys/tree/master/doc/README.md)

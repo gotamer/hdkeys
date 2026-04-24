@@ -6,8 +6,6 @@ then
     echo '!!! You must be in the same folder as your setup.sh file !!!'
     echo "You are in $PWD "
     return
-else
-    echo $PWD    
 fi
 
 export HDKEYS_ROOT_FOLDER="$PWD"

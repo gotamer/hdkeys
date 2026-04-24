@@ -13,7 +13,6 @@ import (
 	"go.hansaray.pw/hdkeys/lib"
 )
 
-
 func main() {
 	// 1. Define Flags
 	var fromIdx, toIdx uint
@@ -147,4 +146,3 @@ func checkPassword(mnemonic, password, target string, from, to uint32) (string, 
 
 	return "", false
 }
-

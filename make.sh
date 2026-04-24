@@ -53,8 +53,6 @@ fmt() {
 	wait
 	go fmt "${ROOTDIR}/cmd/${APPNAME}"
 	wait
-	go fmt "${ROOTDIR}/cmd/recover"
-	wait
 	go fmt "${ROOTDIR}/cmd/wordlist"
 	wait
 }
@@ -62,22 +60,9 @@ fmt() {
 build() {
 	fmt
 	rm -r "${ROOTDIR}/bin"
-	echo "[INF] Building"
 
-	echo "[INF] make & install ${APPNAME}"
+	echo "[INF] building ${APPNAME} in to ./bin/${APPNAME}"
 	go build -o="${ROOTDIR}/bin/${APPNAME}" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/${APPNAME}"
-	wait
-
-	APPNAME='hdkeys_recover'
-	LDFLAGS=("-s -w "
-		"-X '${PACKAGE}/build.AppName=${APPNAME}'"
-		"-X '${PACKAGE}/build.Version=${VERSION}'"
-		"-X '${PACKAGE}/build.CommitHash=${COMMIT_HASH}'"
-		"-X '${PACKAGE}/build.BuildTime=${BUILD_TIME}'"
-		"-X '${PACKAGE}/build.UserName=${BUILD_USER}'"
-	)
-	echo "[INF] make & install ${APPNAME}"
-	go build -o="${ROOTDIR}/bin/${APPNAME}" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/recover"
 	wait
 
 	APPNAME='hdkeys_wordlist'
@@ -88,7 +73,7 @@ build() {
 		"-X '${PACKAGE}/build.BuildTime=${BUILD_TIME}'"
 		"-X '${PACKAGE}/build.UserName=${BUILD_USER}'"
 	)
-	echo "[INF] make & install ${APPNAME}"
+	echo "[INF] building ${APPNAME} in to ./bin/${APPNAME}"
 	go build -o="${ROOTDIR}/bin/${APPNAME}" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/wordlist"
 	wait
 }
@@ -123,3 +108,4 @@ go env -w GOOS=$(go env GOHOSTOS)
 go env -w CGO_ENABLED=${GOCGO}
 go env -w GO111MODULE=${GOMOD}
 echo "[INF] all done"
+
