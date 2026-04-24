@@ -1,0 +1,111 @@
+
+BIP39 Mnemonic:    tree matrix federal video roof sniff great wheel valve rib daughter public
+BIP39 Passphrase:  somePass@word
+BIP39 Seed:        a2793b2ee762013d7b5d7db5db936542f9c66d7f7d626b6a8c17df39473ee00b7aedb3f29399c135631a4ad1e6a4160e7dfbbbdcad215c2c9031daf5f9008c70
+BIP32 Root Key:    xprv9s21ZrQH143K2XzcmT3FAf5Z66A9CKfgRqDdxWNSe7PhEmkUDcM2VAtmgwxtCaTEVJBiFCuwTTx5x8m1U3FWBYWQhNvnGV3MrmwE5YxwtGu
+
+Path(BIP44)        Legacy(P2PKH, compresed)           WIF(Wallet Import Format)                           
+----------------------------------------------------------------------------------------------------------
+m/44'/0'/0'/0/0    1DXy4D6JdA38cpfAN3Lc8R3ZT1WuGh6eHA KxHwm58h6v73AGybqLN9LV8W4SJ1Yevq2j2Yi2aAAHBXKByHMmKM
+m/44'/0'/0'/0/1    1PP9MrApiU3VMprisNLzUDbwmW76NJPsyC L5cr7XgZwVMHVPzSJiTW2boozWjj49vqnoAZoaR4NsUWhLWjWtmy
+m/44'/0'/0'/0/2    1GttSh1cgS579haJ2iHQTfCGXoGxer6M2i L3xQbJiC2XT7wvo3s7TibYCwASJMJGBeCg46uVAg2RVm8LnsXQDu
+m/44'/0'/0'/0/3    1Lyy7fjqAFdG2C67E9vPAaLPCThMdW5Ywi KztiWTFZpMMRRybtPhKWjvjZRxGxaEQanxqRnEnEmFdr6oeF8FAA
+m/44'/0'/0'/0/4    15GQ3As7MYa1pPbkZrbVuuA4uLyfPc796n L5cNPfFyifk4QwQbQ6WL9WNCk3NrmdhEeboptikr3etMA5s6iH1X
+m/44'/0'/0'/0/5    1B69c9HNQ95z7UmcLhe6YBhyq3HrXbDGY8 KzCwxZchoLT2CqnoPjZPQRtsw2nW5DWmowQzEVJWtRxxxyofa5vN
+m/44'/0'/0'/0/6    1Dt1z14bZzpT4AsqfF3BqyNNZgAm2J5HiV KwV3WnPT7qp34Fv3JMXAPxsLyT5yTbSuevViD89UeWv9tujLmVvm
+m/44'/0'/0'/0/7    1MTX3i3MWhLF8SXRGLFiyLroBTT1rv9EXu L54o4L3ekCPMGHiuNyyLifFJ3JkQ6UspQYKKfs2tRtStYnf4V9tU
+m/44'/0'/0'/0/8    12PNVFuGZsjLswJmiJZ4BRbVSCUhs6YmTL L3tK5y8AuEXXT4hvWCu7fs5DwC4nfbrTMtguTx7jnD2YfedLD7pr
+m/44'/0'/0'/0/9    1J9wie1EyuHCRS77PkBGMVcxGA89ZhZmyU L54moPBnabH16YgpDVyHW8vwMJaxNHPjajR4u5DotZr8JZkbwa8T
+
+Path(BIP49)        SegWit(P2WPKH-nested-in-P2SH)      WIF(Wallet Import Format)
+----------------------------------------------------------------------------------------------------------
+m/49'/0'/0'/0/0    3BauybufkQexpmRWqERVRtvfZYJwcwfXSM L293EbJMp7S87Zamzkz53G8wfmeYfdz4pJeKb5nsJpAkDHdDin8B
+m/49'/0'/0'/0/1    39ZA8ikJdW8fwDnTVwXrYiq4YxtkvZXDZv L3o7d7mfoZhF7WayMPs4ByV8sa9E5EjnJLgmkb6XsrYqbxz3teFa
+m/49'/0'/0'/0/2    38eNmNn37AKv4UBeVtBSiKnQBw1jtnUt7V L5MzbNT98sN65q6V4sDMgRUsk641S6qGvGRAS2vzzEueeCaXmPTk
+m/49'/0'/0'/0/3    3No35uT2QZnR8FyXRy6BnABdJwH1iPQaBx KyPW9YEXJAoD6XjXchQxJfzJKQeWeurw4RTFecgMv9tWRWBzouPo
+m/49'/0'/0'/0/4    329iMnQqgzajfxFBSebNDPxhuJJT6xng8w Ky1BfZgSyfki3nZFArzF3hbybMJvkdAmG4sggK3QKAEE3DmeZDPp
+m/49'/0'/0'/0/5    3CN3xb1NFmUFZGQMMvS68jDcoi19RqC19S KxFTXjLYRimEDWUboGaG9hLkxz7GEtMbeTqc2pv5JETGTn61Dt3P
+m/49'/0'/0'/0/6    3LPztXvvvjikjhPcd1j2R9oiCMjLJ4Q3Us KwMUzXB6DNYcLumEY8QFQK363GkLAmbBSt3JE8ARU4V5fcuAFbW1
+m/49'/0'/0'/0/7    3FQsEwbXFbDLmdoZ6Zqm8Ezh8SD4HR3AtB L1MquTRPRGo9Qt6qpULttHTKvY1SEUSCAAxHLNfeCVARrNtfrgkU
+m/49'/0'/0'/0/8    3Qw7tZJe9yDSKVgwxKermpe7cUpvtjJVVW KyfhAzzQYX3ovoK9QQybw4dMRoNJhvLNdtS3BV9P1evRjz4SGPgG
+m/49'/0'/0'/0/9    3DXZ8dENX5Di7jJoPunLCzaCHPUvEMAfCg Kzx779rihaThLE4vLbczLReJYnmTya2PEpfCu9EcxnA8DYRTkZ4R
+
+Path(BIP84)        SegWit(P2WPKH, bech32)                     WIF(Wallet Import Format)
+------------------------------------------------------------------------------------------------------------------
+m/84'/0'/0'/0/0    bc1qz6l4dqqxg60hd0dj5tjq7s8m3tg75gtpnpyktv L4WTgMjwhtAu7EKjTUUsKFJ7orvV7UXUBdQBmef5wZ4xBRmjrgUs
+m/84'/0'/0'/0/1    bc1q8hwjj447ugpnkvyrjgp4gz76n8267mlxw3yuw8 KxhsUtYM9oHCjKDotcgseyN6ZX1BNWTzGNze5Dhskxbg9gxPUeBq
+m/84'/0'/0'/0/2    bc1qut9pae8zma5tgu8ter6crlkg0wd0mzjaff0gu2 L3zMMNDnDTHbKKWjUiNrZF2xS6NYhw2nqThn9yUKGUguBCEnfMeG
+m/84'/0'/0'/0/3    bc1qsewqwwzr2d9mxc9l0musrf6hhke9zexz03sllp L3cXrxGa515vm2j4Km7qUVBhVER7qfMTNYp5TFFZsNJXWb7s9jH5
+m/84'/0'/0'/0/4    bc1qhs5xzgyjh226cxckmnfcge75ekp8v4srw8vdv8 KwawwdCqwRbjprXdb5FMTGsfQZaxR9odFHrbvRGEVTVa79WmKvxq
+m/84'/0'/0'/0/5    bc1qpjqx7rl2au02hp2mcfs2nl98h4uuceq0jma4a8 KxeGknAaz8LgHFGTuR6PSYSgzQaQ6gxi2Zvc1EE9nTMemDXkEESJ
+m/84'/0'/0'/0/6    bc1q5fxzzrepnfu2rnncqcgadsttuz679jxeuvmswx KyDCWwUryN5Lp5fBUTJszHj7KKcwvTnwnazfbufsYBaoSTP9VoHU
+m/84'/0'/0'/0/7    bc1q3sd5kfaut3pen5hhg8r40n5txx4w4cjk73eckc Kxmz7Kaof7SgGu488bYibUv2W5Up3LaJN2AF9RLYtgfQBJfT3Hyq
+m/84'/0'/0'/0/8    bc1qq63xngwsmlk3re4j9kfjz5t3qae7tcpmu0tesu Kyd58yutYvVfaKQfX3hSndUFG9SrbNkV3M8oFN6imYydm7wazins
+m/84'/0'/0'/0/9    bc1qewjxkkmusdzkfwmmy73y3vq4h2drugzqjn3rwh KzyHx3EBg2WzyGp9p4dEbum4fr7qmbYS3ySDvKuteTsqhgZnDBmE
+
+Path(BIP86)        Taproot(P2TR, bech32m)                                         WIF(Wallet Import Format)
+--------------------------------------------------------------------------------------------------------------------------------------
+m/86'/0'/0'/0/0    bc1p3c3cdj2ptj6mcj3nzaeeglu2n594r7yav7qr32p4znhs2724gkks322r28 L3co7Bk7gkCLG6MZRABQxiUwxxR5XBCZA4iGpmQQXaKujfyX65N3
+m/86'/0'/0'/0/1    bc1pk2w6t8tfvup79r5hhzmzap58xyp0v8mcsnl8t9mwvsrwfc4a8mzsm9tp26 L1NVqp6H32DoqjHxbGsqxxwL9PXCKdDAUp1TYQWLkvSvsVz7VdRa
+m/86'/0'/0'/0/2    bc1payl0yx5uqfqf4r2cxp4f2srl3dfdr372q84eavpmz83y2y2ewdgqp4mv88 L2C1z1twwqbn5KFEu9Af6XiPx4VZXnbpUjM9NeWbFMyKtEBw53h8
+m/86'/0'/0'/0/3    bc1p3h8er6qrq0csvzatcld23f0l8wj26gmu7vxtl6tu9s32xquvc24qmcl6wj Kwze4byZa1VmTL1ZDEpQmBv1Wpf4fEy2sm7dJ1z4KiKNDfMx6XWw
+m/86'/0'/0'/0/4    bc1ptqw4fsvh8addh38gza8p5pxs6s0qrkawyclf58afenxx9k554ckqzen828 L2JDGRne38RqcnK57dAJkyqCSivaS2TKnVqCKJxkZQE6cS2ChSHs
+m/86'/0'/0'/0/5    bc1pzp5ca3deaufey09upl6vk52jx0x7swrtxqeszqc5gtqk7n7zvrlsj9wwj3 KwVPdYRYqudxmB5FPc5fLqiApDhr8cdmno7W4dsjur1tG7JaTNMs
+m/86'/0'/0'/0/6    bc1pg0w7esyy3daevr7q0ln096tz2493c0j6yr80w78wzp6q52ww24hs88rk2z L1DrP6cZHgPLi2vgnCihWrQcumLJzGv74t8m8cqKyyvsgfeNswPe
+m/86'/0'/0'/0/7    bc1pcv8r78c6rqa9m6m0k5fhy54ckxu3hcdz7duftuzar2aw9q6tejtsepxssy L319ZQcwLtTgVnGXqwNxupyTTsTow1rqwAYVa8EkMjchbZud1df6
+m/86'/0'/0'/0/8    bc1p6gwysssdnwkejpvznd77dy4nqhra6wh7mt47hynd062jfc27hwgsh84c0g Kz7Ad2oQ2vKtfQzg5KVFu8WGzD4HwbVz7aXHKtPMH5CDuowtPo6q
+m/86'/0'/0'/0/9    bc1p6vhrn3w3pk0susadc6pg5ll9kux4sqnky0l2f6whd69vlsp350pse097hh Kx6eQp7CaQFr1fmjXSFTGJzsP9bygPXoX27pRJS7w78cbgYw29b4
+
+Path(BIP44)        Nostr                                     
+--------------------------------------------------------------------------------
+m/44'/1237'/0'/0/0 WIF:  L11TcrnthbdhgEo3NuGvchvJ6PqywdxT5s6PrXLMnnrkNJ6ELk9c
+m/44'/1237'/0'/0/0 NSec: nsec1wyxpza60x25kdewqe78kruynh6tll5xvfyynplqjj5sljrprlc4svfy0gk
+m/44'/1237'/0'/0/0 NPub: npub1uxj0yph4ks277qtklg4k7ljdujf7rzr7f7ut27rwq0rpt2yvyqrql88w2j
+m/44'/1237'/0'/0/0 PHex: e1a4f206f5b415ef0176fa2b6f7e4de493e1887e4fb8b5786e03c615a88c2006
+
+m/44'/1237'/1'/0/0 WIF:  KxTPH5bXU3QnSvU6yhEqt7tK9tNi4cL2niBEwkhUyL1P23BhyBDq
+m/44'/1237'/1'/0/0 NSec: nsec1yn0nqa05xdg0n8sz9c3v0ac2mhp6s20run59rv755cn9t2y5amqsxrdhsx
+m/44'/1237'/1'/0/0 NPub: npub1hr7q47rh3y4e94pyv44v5gvuue0rj4yxzyfz4tcpksymzwp6907q8x0gcr
+m/44'/1237'/1'/0/0 PHex: b8fc0af877892b92d424656aca219ce65e39548611122aaf01b409b1383a2bfc
+
+m/44'/1237'/2'/0/0 WIF:  L23N7nLEUBivwdQ7Lvij9aerY1cP3EWHaQQ8Ho8HkRh9JqAHMpoT
+m/44'/1237'/2'/0/0 NSec: nsec13lw40th2szl4003ztcvmxhacmdqd8hxpg0namn0swwrwm90sj63scf0g59
+m/44'/1237'/2'/0/0 NPub: npub16lza436nrvp6zpe9uc9shuwhj9wgrh8ue97xzhyl8ymxzh5da35qnkhkq7
+m/44'/1237'/2'/0/0 PHex: d7c5dac7531b03a10725e60b0bf1d7915c81dcfcc97c615c9f3936615e8dec68
+
+m/44'/1237'/3'/0/0 WIF:  KzoYsRSY4zF2HKwZvXatTqXYANkzRKQhXK1uXd7ogzcESZPGYaru
+m/44'/1237'/3'/0/0 NSec: nsec1dt46x6rlpkgm475wc0jxe8xs33xxncwu9wz9kpw4wd458ygtupkqzefl82
+m/44'/1237'/3'/0/0 NPub: npub1h3wye9l40rs0r5hngq6n7559e0zc43xgpvsxttk8talva5f979tqkxvk9d
+m/44'/1237'/3'/0/0 PHex: bc5c4c97f578e0f1d2f340353f5285cbc58ac4c80b2065aec75f7eced125f156
+
+m/44'/1237'/4'/0/0 WIF:  L469VmJxD222g5CFA46i37mrfNSfrvtfNpoFAdTBMQDjUs2kbt9H
+m/44'/1237'/4'/0/0 NSec: nsec1enug2dtq5a5u87kw3puuclxwrzhdujsjqvm5n4aq4flt8vnj66ns2pz35n
+m/44'/1237'/4'/0/0 NPub: npub1z0mg5e90ckuc9urla4q0l5wpqhjkqlzjmz2qpwkgycxw2cmepdzqvheme4
+m/44'/1237'/4'/0/0 PHex: 13f68a64afc5b982f07fed40ffd1c105e5607c52d89400bac8260ce563790b44
+
+m/44'/1237'/5'/0/0 WIF:  KzeVagWyWPQWuv4iUzgGyYnGcH6QdZopZMsa347KoLQsjrwpDnKu
+m/44'/1237'/5'/0/0 NSec: nsec1vepw0led45j5wkle647xkffuygparm7san0chnalsfmr45a36mdqtvxfzg
+m/44'/1237'/5'/0/0 NPub: npub1d6wuew55xcsly3xk2qh9ty89llhpznzr0hlmqzssxp79prsqfcss54enav
+m/44'/1237'/5'/0/0 PHex: 6e9dccba943621f244d6502e5590e5ffee114c437dffb00a10307c508e004e21
+
+m/44'/1237'/6'/0/0 WIF:  KyQ81cj2rheVMDxwt2Tj9BuVp8RjYFGstxwbDeQXsB7Ki38A8Srj
+m/44'/1237'/6'/0/0 NSec: nsec1gyru75d34l0xhpr0qysa9ad4mvnhqwmtggkpx4dcwvsj3q5rc92qvdy22f
+m/44'/1237'/6'/0/0 NPub: npub142ymm4nhm6suj07m3u2qwg3aw3f3c8qgm9tkg7cwv4lwp0525hvqkmdvt6
+m/44'/1237'/6'/0/0 PHex: aa89bdd677dea1c93fdb8f1407223d74531c1c08d957647b0e657ee0be8aa5d8
+
+m/44'/1237'/7'/0/0 WIF:  KwUoBVPiTEYVabPuqcX1JCe3zdoMac2vK6DHX6apqixW5qxN9WL9
+m/44'/1237'/7'/0/0 NSec: nsec1qlpvnwykdkg9g86f765s7ms6rj8h0ayjlnhv4a5ytvmz3kggrzfqk3dul7
+m/44'/1237'/7'/0/0 NPub: npub1mqrkfza3zp65cusnkfn8knzmc9e8hhu5ycj5ehwmt47qnmwr7twsf94kwq
+m/44'/1237'/7'/0/0 PHex: d807648bb110754c7213b2667b4c5bc1727bdf9426254cdddb5d7c09edc3f2dd
+
+m/44'/1237'/8'/0/0 WIF:  KzssjbbQCbZgwG5GhKPuyqeUkTeCeuGSnoCoN4kUUJPNJqhR7Z9Z
+m/44'/1237'/8'/0/0 NSec: nsec1d5j5yxplzw5nqctj8maghy5kz3tnfd4v4kk9x9pwned4lcgnculsvxl45m
+m/44'/1237'/8'/0/0 NPub: npub17lepj2zg3rk4srrfxzfsgc50pdfg5dfzcsrleq7gmv5vlgysganqm72y78
+m/44'/1237'/8'/0/0 PHex: f7f219284888ed580c69309304628f0b528a3522c407fc83c8db28cfa0904766
+
+m/44'/1237'/9'/0/0 WIF:  L2M48Hg52CWdW4k62zetGcmdBddZdgdF8y9EePRGM8q7XzmbXF2i
+m/44'/1237'/9'/0/0 NSec: nsec1nrms24fcacljz27l7dypddrzwxfh2r7dx0dxmaqy862sukzpkzls8xcf5y
+m/44'/1237'/9'/0/0 NPub: npub1z4spc5zqupned55n52uz80r4rqdm8l66ycup79tepkxudaxp9sxs6xmdl0
+m/44'/1237'/9'/0/0 PHex: 15601c5040e06796d293a2b823bc75181bb3ff5a26381f15790d8dc6f4c12c0d
+
+

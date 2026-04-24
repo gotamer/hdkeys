@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -13,20 +12,9 @@ import (
 	"go.hansaray.pw/hdkeys/lib"
 )
 
-func main() {
-	// 1. Define Flags
-	var fromIdx, toIdx uint
-	flag.UintVar(&fromIdx, "from", 0, "starting address index")
-	flag.UintVar(&toIdx, "to", 10, "ending address index")
+func recover(from, to uint32) {
 
-	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage: %s [options] \n", os.Args[0])
-		fmt.Println("\nOptions:")
-		flag.PrintDefaults()
-	}
-
-	flag.Parse()
-	from, to := uint32(fromIdx), uint32(toIdx)
+	var mnemonic = readMnemonic()
 
 	targetKey := os.Getenv("HDKEYS_TARGET_KEY")
 	if targetKey == "" {
@@ -37,18 +25,6 @@ func main() {
 	dirRoot := os.Getenv("HDKEYS_ROOT_FOLDER")
 	if dirRoot == "" {
 		fmt.Println("Error: HDKEYS_ROOT_FOLDER not set")
-		return
-	}
-
-	rawMnemonic := os.Getenv("HDKEYS_MNEMONIC")
-	if rawMnemonic == "" {
-		fmt.Fprintf(os.Stderr, "Error: $HDKEYS_MNEMONIC environment variable not set\n")
-		os.Exit(1)
-	}
-
-	mnemonic := hdkeys.CleanWords(rawMnemonic)
-	if !hdkeys.ValidateWords(mnemonic) {
-		fmt.Println("Error: Invalid Mnemonic")
 		return
 	}
 
