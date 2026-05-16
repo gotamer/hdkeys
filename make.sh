@@ -83,13 +83,23 @@ release() {
 	echo "[INF] release, fmt, metadata, build ${APPNAME}"
 	fmt
 	wait
-	env GOOS=linux GOARCH=amd64 go build -o="bin/${APPNAME}-linux-amd64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/"
+	env GOOS=linux GOARCH=amd64 go build -o="bin/${APPNAME}-linux-amd64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/${APPNAME}"
 	wait
-	env GOOS=linux GOARCH=arm64	go build -o="bin/${APPNAME}-linux-arm64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/"
+	env GOOS=linux GOARCH=arm64	go build -o="bin/${APPNAME}-linux-arm64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/${APPNAME}"
 	wait
-	env GOOS=windows GOARCH=amd64 go build -o="bin/${APPNAME}-windows-amd64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/"
+
+	APPNAME='hdkeys_wordlist'
+	LDFLAGS=("-s -w "
+		"-X '${PACKAGE}/build.AppName=${APPNAME}'"
+		"-X '${PACKAGE}/build.Version=${VERSION}'"
+		"-X '${PACKAGE}/build.CommitHash=${COMMIT_HASH}'"
+		"-X '${PACKAGE}/build.BuildTime=${BUILD_TIME}'"
+		"-X '${PACKAGE}/build.UserName=${BUILD_USER}'"
+	)
+	echo "[INF] building ${APPNAME} in to ./bin/${APPNAME}"
+	env GOOS=linux GOARCH=amd64 go build -o="bin/${APPNAME}-linux-amd64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/wordlist"
 	wait
-	env GOOS=darwin GOARCH=amd64 go build -o="bin/${APPNAME}-darwin-amd64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/"
+	env GOOS=linux GOARCH=arm64 go build -o="bin/${APPNAME}-linux-arm64" -ldflags="${LDFLAGS[*]}" "${ROOTDIR}/cmd/wordlist"
 	wait
     metadata
 	wait

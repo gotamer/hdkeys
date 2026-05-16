@@ -9,6 +9,7 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/schollz/progressbar/v3"
 	"go.hansaray.pw/hdkeys/lib"
 )
 
@@ -28,11 +29,27 @@ func recover(from, to uint32) {
 		return
 	}
 
+	numWorkers := runtime.NumCPU()
+	fmt.Printf("Searching with %d workers...\n", numWorkers)
+
+	// 1. Count lines to set the bar length
+	fileForCount, err := os.Open(filepath.Join(dirRoot, "word_list.txt"))
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+	lineCount := 0
+	scannerCount := bufio.NewScanner(fileForCount)
+	for scannerCount.Scan() {
+		lineCount++
+	}
+	fileForCount.Close()
+	bar := progressbar.Default(int64(lineCount), "Searching")
+
 	// 2. Setup Concurrency
 	jobs := make(chan string, 100)
 	results := make(chan string)
 	var wg sync.WaitGroup
-	numWorkers := runtime.NumCPU()
 
 	// Start Workers
 	for w := 1; w <= numWorkers; w++ {
@@ -43,6 +60,7 @@ func recover(from, to uint32) {
 				if path, found := checkPassword(mnemonic, password, targetKey, from, to); found {
 					results <- fmt.Sprintf("\nMATCH FOUND!\nPass: %s\nPath: %s", password, path)
 				}
+				bar.Add(1) // Update bar after each check
 			}
 		}()
 	}
@@ -61,7 +79,6 @@ func recover(from, to uint32) {
 	}()
 
 	// 4. Wait for Match or End
-	fmt.Printf("Searching with %d workers...\n", numWorkers)
 	for res := range results {
 		fmt.Println(res)
 		os.Exit(0) // Stop immediately on first match

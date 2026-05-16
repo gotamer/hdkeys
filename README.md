@@ -2,7 +2,7 @@ Hierarchical Deterministic Keys
 ===============================
 
 hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same 
-mnemonic seeds, and a command-line tool that uses this library.  
+mnemonic seeds, and two command-line tools that use this library.  
 
 - It allows for the creation of __mnemonic seeds__ (or bring your own).  
 - From the __mnemonic seeds__ it will create __Hierarchical Deterministic (HD)__ addresses, AKA __HD Wallets__.
